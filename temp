@@ -1,0 +1,35 @@
+        while (running) {
+            try {
+                System.out.println("Add customer email:");
+                email = scanner.nextLine();
+                if (!pattern.matcher(email).matches()) {
+                    System.out.println("Invalid email format");
+                } else {
+                    running = false;
+                }
+            } catch (Exception ex) {
+                System.out.println("Invalid email format");
+            }
+        }
+        running = true;
+
+        while (running) {
+            try {
+                System.out.println("Add customer first name:");
+                firstName = scanner.nextLine();
+                running = false;
+            } catch (Exception ex) {
+                System.out.println("Invalid name format");
+            }
+        }
+        running = true;
+
+        while (running) {
+            try {
+                System.out.println("Add customer last name:");
+                lastName = scanner.nextLine();
+                running = false;
+            } catch (Exception ex) {
+                System.out.println("Invalid name format");
+            }
+        }
