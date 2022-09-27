@@ -1,28 +1,31 @@
 # Project: Hotel Reservation Application
 Project1 of Udacity Java Programming
 
-##Overview: Hotel Reservation Application
+## Overview: Hotel Reservation Application
 In this project, you will be designing and implementing a Java hotel reservation application. The hotel reservation application will allow customers to find and book a hotel room based on room availability. This project will demonstrate your abilities to design classes using OOP, organize and process data with collections, and use common Java types.
 
-##Main Components of the App
+### Main Components of the App
 The major components of the Hotel Reservation Application will consist of the following:
 
-CLI for the User Interface. We'll use the Command Line Interface (or CLI for the user interface. For this, we'll need to have Java monitor the CLI for user input, so the user can enter commands to search for available rooms, book rooms, and so on.
-Java code. The second main component is the Java code itself—this is where we add our business logic for the app.
-Java collections. Finally, we'll use Java collections for in-memory storage of the data we need for the app, such as the users' names, room availability, and so on.
+1.**CLI for the User Interface.** We'll use the Command Line Interface (or CLI for the user interface. For this, we'll need to have Java monitor the CLI for user input, so the user can enter commands to search for available rooms, book rooms, and so on.
+2.**Java code.** The second main component is the Java code itself—this is where we add our business logic for the app.
+3.**Java collections.** Finally, we'll use Java collections for in-memory storage of the data we need for the app, such as the users' names, room availability, and so on.
 
-##Application Architecture
+![hotelreservation02](hotelreservation02.png)
+
+### Application Architecture
 Let's talk about the structure or architecture of the application. The app will be separated into the following layers:
 
-User interface (UI), including a main menu for the users who want to book a room, and an admin menu for administrative functions.
-Resources will act as our Application Programming Interface (API) to our UI.
-Services will communicate with our resources, and each other, to build the business logic necessary to provide feedback to our UI.
-Data models will be used to represent the domain that we're using within the system (e.g., rooms, reservations, and customers).
+1.**User interface (UI)**, including a main menu for the users who want to book a room, and an admin menu for administrative functions.
+2.**Resources** will act as our Application Programming Interface (API) to our UI.
+3.**Services** will communicate with our resources, and each other, to build the business logic necessary to provide feedback to our UI.
+4.**Data models** will be used to represent the domain that we're using within the system (e.g., rooms, reservations, and customers).
+![hotelreservation01](hotelreservation01.png)
 
-##Layers
+### Layers
 An important thing to notice about this architecture is how we use layers to support modularization and decoupling. For example, If we later decided to change our UI components to a webpage instead of a command-line interface, layering would support this.
 
-##Project Requirements
+## Project Requirements
 When building an app, it is common as a developer to be given a specification or set of requirements for how the app should work and what it should do. This page provides the required features for the Hotel Reservation App.
 
 Remembering and applying these requirements will be easiest if you notice the reasons for them—for example, one requirement is that two people should not be able to book the same room on the same date. That requirement is a realistic one for any functional reservation app that isn't going to drive its users crazy!
@@ -31,7 +34,7 @@ Note: You don't need to memorize the information here—rather, you’ll want to
 
 Once you submit your project, we'll review your work and give you feedback if there's anything that you need to work on. If you'd like to see the exact points that your reviewer will check for when looking at your work, you can have a look over the project rubric.
 
-User Scenarios
+### User Scenarios
 The application provides four user scenarios:
 
 Creating a customer account. The user needs to first create a customer account before they can create a reservation.
@@ -42,7 +45,7 @@ Booking a room. Once the user has chosen a room, the app will allow them to book
 
 Viewing reservations. After booking a room, the app allows customers to view a list of all their reservations.
 
-Admin Scenarios
+### Admin Scenarios
 The application provides four administrative scenarios:
 
 Displaying all customers accounts.
@@ -58,18 +61,18 @@ Rubric Tip: The Rubric item "Use a for loop or while loop to iterate over and pr
 
 Example: If the customers date range search is 1/1/2020 – 1/5/2020 and all rooms are booked, the system will search again for recommended rooms using the date range 1/8/2020 - 1/12/2020. If there are no recommended rooms, the system will not return any rooms.
 
-Room Requirements
+### Room Requirements
 Room cost. Rooms will contain a price per night. When displaying rooms, paid rooms will display the price per night and free rooms will display "Free" or have a $0 price.
 Unique room numbers. Each room will have a unique room number, meaning that no two rooms can have the same room number.
 Room type. Rooms can be either single occupant or double occupant (Enumeration: SINGLE, DOUBLE).
-Customer Requirements
+### Customer Requirements
 The application will have customer accounts. Each account has:
 
 A unique email for the customer. RegEx is used to check that the email is in the correct format (i.e., name@domain.com).
 A first name and last name.
 The email RegEx is simple for the purpose of this exercise and may not cover all real-world valid emails. For example "name@domain.co.uk" would not be accepted by the above RegEx because it does end with ".com". If you would like to try to make your RegEx more sophisticated, you may—but it is not required for this project.
 
-Error Requirements
+### Error Requirements
 The hotel reservation application handles all exceptions gracefully (user inputs included), meaning:
 
 No crashing. The application does not crash based on user input.
